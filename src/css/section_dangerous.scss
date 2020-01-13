@@ -1,0 +1,167 @@
+.dangerous {
+    padding: px-to-rem(30px) px-to-rem(20px) px-to-rem(40px);
+}
+
+.dangerous__title,
+.dangerous-descr,
+.dangerous__img,
+.dangerous-footer {
+    position: relative;
+}
+
+.dangerous-descr::before,
+.dangerous-namber,
+.dangerous-footer__icon {
+    position: absolute;
+}
+
+.dangerous-header {
+    display: flex;
+    margin-bottom: px-to-rem(47px);
+    justify-content: space-between;
+}
+
+.dangerous__subtitle {
+    margin: px-to-rem(36px) 0 px-to-rem(46px);
+    color: $color-dangerous-subtitle;
+    font-weight: $font-weight-bold;
+}
+
+.dangerous-descr {
+    margin-bottom: px-to-rem(30px);
+    padding-right: px-to-rem(56px);
+}
+
+.dangerous-descr::before {
+    content: '';
+    top: px-to-rem(-16px);
+    left: 0;
+    background-color: $color-dangerous-line;
+    height: px-to-rem(3px);
+    width: px-to-rem(50px);
+}
+
+.dangerous__img {
+    flex-basis: 48%;
+}
+
+.dangerous__list {
+    margin-bottom: px-to-rem(40px);
+}
+
+.dangerous-namber {
+    background-color: $color-dangerous-number;
+    top: px-to-rem(-14px);
+    left: px-to-rem(120px);
+}
+
+.dangerous-ellipse {
+    padding: px-to-rem(18px) px-to-rem(18px);
+    display: block;
+    font-size: $font-size-bold;
+    color: $color-write;
+    line-height: px-to-rem(18px);
+}
+
+.dangerous-ellipse::before {
+    background: url('../img/png/main_dangerous/Cicle-dangerous.png') no-repeat;
+    @include underline(block, absolute, '', -1);
+    top: px-to-rem(-6px);
+    left: px-to-rem(-140px);
+    height: px-to-rem(120px);
+    width: px-to-rem(188px);
+}
+
+.dangerous-footer {
+    padding: px-to-rem(39px) px-to-rem(50px);
+    border: 2px solid $color-dangerous-footer-line;
+    border-radius: 10px;
+}
+
+.dangerous-footer__icon {
+    background-color: $color-write;
+    height: px-to-rem(10px);
+    width: px-to-rem(170px);
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.dangerous-footer__icon::before {
+    background: url('../img/svg/main_dangerous/Forma 1.svg') center no-repeat;
+    @include underline(block, absolute, '', 0);
+    top: 57%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    height: px-to-rem(40px);
+    width: px-to-rem(64px);
+    border: 2px solid $color-write;
+}
+
+.dangerous-header__text {
+    flex-basis: 48%;
+    padding-top: px-to-rem(10px);
+    font-weight: $font-weight-bold;
+    align-self: center;
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .dangerous {
+        padding: px-to-rem(30px) 0;
+        max-width: px-to-rem(400px);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .dangerous {
+        padding: px-to-rem(30px) px-to-rem(20px) px-to-rem(50px);
+    }
+
+    .dangerous__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: px-to-rem(1160px);
+        flex-wrap: wrap;
+        margin-bottom: px-to-rem(50px);
+    }
+
+    .dangerous__item {
+        flex-basis: 48%;
+    }
+
+    .dangerous__item:last-child {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .dangerous {
+        padding: px-to-rem(198px) 0 px-to-rem(130px);
+    }
+
+    .dangerous__subtitle {
+        font-size: px-to-rem(24px);
+        line-height:  px-to-rem(28px);
+    }
+
+    .dangerous-descr {
+        font-size: $font-size-medium;
+        line-height: px-to-rem(28px);
+    }
+
+    .dangerous-header__text {
+        font-size: $font-size-title;
+        line-height: px-to-rem(26px);
+    }
+
+    .dangerous-footer__text {
+        font-size: $font-size-title;
+        line-height:  px-to-rem(28px);
+        text-align: center;
+    }
+
+    .dangerous__item {
+        flex-basis: 31.5%;
+    }
+}

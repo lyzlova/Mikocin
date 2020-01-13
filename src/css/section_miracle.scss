@@ -1,0 +1,196 @@
+.miracle-bcg {
+    background-color: $color-background;
+    position: relative;
+}
+
+.miracle {
+    padding: px-to-rem(30px) px-to-rem(20px) px-to-rem(40px);
+}
+
+.miracle__title {
+    margin-bottom: px-to-rem(80px);
+    position: relative;
+}
+
+.miracle__descr {
+    position: relative;
+    background-color: $color-write;
+    margin-bottom: px-to-rem(60px);
+    border-top: 6px solid $color-green-price;
+    border-radius: px-to-rem(10px);
+    padding: px-to-rem(64px) px-to-rem(20px) px-to-rem(35px);
+}
+
+.miracle-block-icon {
+    position: absolute;
+   background-color: $color-background;
+    height: px-to-rem(100px);
+    left: 51%;
+    width: px-to-rem(100px);
+    border-radius: 100%;
+    padding: px-to-rem(9px);
+    top: 0; 
+}
+
+.miracle__icon1::before,
+.miracle__icon2::before,
+.miracle__icon3::before {
+    height: px-to-rem(80px);
+    width: px-to-rem(80px);
+    top: px-to-rem(48px);
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.miracle__icon1::before {
+    background: url('../img/svg/main_miracle/Forma 1.svg') center no-repeat;
+    @include underline(inline-block, absolute, '', 0);
+}
+
+.miracle__icon2::before {
+    background: url('../img/svg/main_miracle/Forma 2.svg') center no-repeat;
+    @include underline(inline-block, absolute, '', 0);
+}
+
+.miracle__icon3::before {
+    background: url('../img/svg/main_miracle/Forma 3.svg') center no-repeat;
+    @include underline(inline-block, absolute, '', 0);
+}
+
+.miracle-block-icon__title {
+    font-size: $font-size-text;
+    font-weight: $font-weight-bold;
+    margin-bottom: px-to-rem(10px);
+}
+
+.miracle__text {
+    font-size: $font-size-text;
+    font-weight: $font-weight-bold;
+    line-height: 1.1; 
+}
+
+.color-red {
+    position: relative;
+    color: $color-red;
+    margin-bottom: px-to-rem(6px);
+}
+
+.color-red__line {
+    font-size: $font-size-text;
+    line-height: 1;
+}
+
+.color-red__line::before {
+    height: px-to-rem(20px);
+    width: px-to-rem(200px);
+    top: px-to-rem(-16px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../img/svg/main_miracle/Rectangle\ 30.svg') center no-repeat;
+    @include underline(block, absolute, '', 0);
+}
+
+.miracle-footer {
+    position: relative;
+    padding: px-to-rem(26px) px-to-rem(90px) px-to-rem(22px);
+    border: 2px solid $color-dangerous-footer-line;
+    border-radius: 10px;
+    font-size: $font-size-subtitle;
+    line-height: 1;
+}
+
+.miracle-footer__text {
+    background-color: $color-background;
+    height: px-to-rem(30px);
+    left: 50%;
+    width: px-to-rem(170px);
+    padding: px-to-rem(9px);
+    top: -6%;
+}
+
+.miracle-footer__descr {
+    line-height: 1.4;
+}
+
+.miracle-footer__text::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    z-index: -1;
+    left: 45%;
+    background-color: $color-dangerous-footer-line;
+    height: px-to-rem(50px);
+    width: px-to-rem(10px);
+}
+
+.miracle-output {
+    font-size: $font-size-title;
+    line-height: 1.1;
+}
+
+.miracle__descr div:nth-child(2) {
+    margin-bottom: px-to-rem(44px);
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .miracle {
+        max-width: px-to-rem(400px);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+    .miracle {
+        padding: px-to-rem(30px) px-to-rem(20px) px-to-rem(50px);
+    }
+
+    .miracle__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: px-to-rem(70px);
+    }
+
+    .miracle__descr:last-child {
+        margin: 0 auto;
+    }
+
+    .miracle__descr {
+        flex-basis: 48%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .miracle {
+        padding: px-to-rem(128px) 0 px-to-rem(130px);
+    }
+
+    .miracle__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: px-to-rem(60px);
+    }
+
+    .miracle__descr {
+        flex-basis: 31.5%;
+        margin-bottom: 0;
+    }
+
+    .miracle__title {
+        font-size:  px-to-rem(48px);
+        line-height: 1;
+    }
+
+    .miracle__descr span {
+        font-size: $font-size-medium;
+        line-height: 1.6;
+    }
+
+    .miracle__descr p {
+        font-size: $font-size-base;
+        line-height: 1.8;
+    }
+
+    .color-red__line::before {
+        width: px-to-rem(300px);
+    }
+}
